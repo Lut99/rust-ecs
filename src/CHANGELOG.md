@@ -1,5 +1,5 @@
 # Changelog
-This file will maintain a list of changes per release of the game-vk crate.
+This file will maintain a list of changes per release of the game-ecs crate.
 
 
 ## [1.0.0] - 2022-08-06
