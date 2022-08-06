@@ -4,7 +4,7 @@
 //  Created:
 //    26 Mar 2022, 10:31:02
 //  Last edited:
-//    06 Aug 2022, 16:19:10
+//    06 Aug 2022, 16:23:27
 //  Auto updated?
 //    Yes
 // 
@@ -51,3 +51,24 @@ macro_rules! to_component_list_mut {
         }
     };
 }
+
+
+// Define some crate-local macros
+/// Performs a `log`-crate `debug`, but only if that feature is defined
+#[cfg(feature = "log")]
+macro_rules! debug {
+    (target: $target:expr, $($arg:tt)+) => {
+        log::debug!($target, $($arg)+)
+    };
+
+    ($($arg:tt)+) => {
+        log::debug!($($arg)+)
+    };
+}
+#[cfg(not(feature = "log"))]
+macro_rules! debug {
+    (target: $target:expr, $($arg:tt)+) => { () };
+
+    ($($arg:tt)+) => { () };
+}
+pub(crate) use debug;

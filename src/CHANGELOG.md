@@ -10,6 +10,7 @@ This file will maintain a list of changes per release of the game-vk crate.
 - A .gitignore file.
 
 ### Changed
+- `log`-related stuff as a feature.
 - Moved `ComponentListBase` to the `spec` module.
 - Cargo.toml to have more information and updated name/version number.
 - Decription of each file to use Rust docstrings.

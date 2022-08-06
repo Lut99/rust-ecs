@@ -4,7 +4,7 @@
 //  Created:
 //    26 Mar 2022, 10:31:26
 //  Last edited:
-//    06 Aug 2022, 16:20:32
+//    06 Aug 2022, 16:23:34
 //  Auto updated?
 //    Yes
 // 
@@ -17,9 +17,9 @@ use std::cell::{RefCell, RefMut};
 use std::collections::{HashMap, HashSet};
 use std::rc::Rc;
 
-use log::debug;
 use parking_lot::{MappedRwLockReadGuard, MappedRwLockWriteGuard, RwLock, RwLockReadGuard, RwLockWriteGuard};
 
+use crate::debug;
 use crate::{to_component_list, to_component_list_mut};
 use crate::spec::{Component, ComponentListBase, Entity};
 use crate::list::ComponentList;
